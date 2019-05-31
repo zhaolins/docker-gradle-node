@@ -55,7 +55,7 @@ RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 ####################
-# cypress
+# npm and yarn
 ####################
 
 RUN apt-get update && \
@@ -80,7 +80,6 @@ RUN echo  " node version:    $(node -v) \n" \
 ####################
 # gradle
 ####################
-
 
 ARG GRADLE_DOWNLOAD_SHA256=7bdbad1e4f54f13c8a78abc00c26d44dd8709d4aedb704d913fb1bb78ac025dc
 RUN set -o errexit -o nounset \
